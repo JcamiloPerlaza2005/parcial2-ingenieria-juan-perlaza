@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EcoMarket</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background:#f4f4f4; }
+    @media (max-width:600px){
+      table, thead, tbody, th, td, tr { display:block; }
+      th { display:none; }
+      td { border: none; padding: 8px 0; }
+      td::before { content: attr(data-label) ": "; font-weight: bold; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Productos disponibles</h1>
+
+  <!-- Control de filtro (se implementará en feature-filtrado) -->
+  <label for="categoriaFiltro">Filtrar por categoría:</label>
+  <select id="categoriaFiltro">
+    <option value="Todas">Todas</option>
+    <option value="Fruta">Fruta</option>
+    <option value="Verdura">Verdura</option>
+  </select>
+
+  <table id="tablaProductos" aria-describedby="lista-productos">
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Precio</th>
+        <th>Categoría</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Producto">Manzana</td>
+        <td data-label="Precio">$2.500</td>
+        <td data-label="Categoría">Fruta</td>
+      </tr>
+      <tr>
+        <td data-label="Producto">Tomate</td>
+        <td data-label="Precio">$1.800</td>
+        <td data-label="Categoría">Verdura</td>
+      </tr>
+      <tr>
+        <td data-label="Producto">Piña</td>
+        <td data-label="Precio">$3.000</td>
+        <td data-label="Categoría">Fruta</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    // Implementación mínima para cuando actives el filtrado (opcional inicialmente)
+    document.getElementById('categoriaFiltro').addEventListener('change', function() {
+      const cat = this.value;
+      const rows = document.querySelectorAll('#tablaProductos tbody tr');
+      rows.forEach(r => {
+        const categoria = r.cells[2].textContent.trim();
+        r.style.display = (cat === 'Todas' || categoria === cat) ? '' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
