@@ -5,56 +5,234 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>EcoMarket</title>
   <style>
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
-    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
-    th { background:#f4f4f4; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f8fafb;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(90deg, #4caf50 60%, #388e3c 100%);
+      color: #fff;
+      padding: 32px 0 24px 0;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 32px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+    header p {
+      margin: 8px 0 0 0;
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+    main {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(60,60,60,0.07);
+      padding: 32px 24px 24px 24px;
+    }
+    .bienvenida {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      background: #e8f5e9;
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-bottom: 28px;
+      box-shadow: 0 1px 6px rgba(60,60,60,0.07);
+      font-size: 1.13rem;
+      color: #2e7d32;
+    }
+    .bienvenida .icono {
+      font-size: 2.5rem;
+      background: #fff;
+      border-radius: 50%;
+      padding: 10px;
+      box-shadow: 0 1px 4px rgba(60,60,60,0.08);
+      color: #43a047;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 48px;
+      min-height: 48px;
+    }
+    .filtro {
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    label {
+      font-weight: 500;
+      color: #333;
+    }
+    select {
+      padding: 6px 12px;
+      border-radius: 6px;
+      border: 1px solid #bdbdbd;
+      font-size: 1rem;
+      background: #f4f4f4;
+      transition: border 0.2s;
+    }
+    select:focus {
+      border: 1.5px solid #4caf50;
+      outline: none;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      background: #fafafa;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(60,60,60,0.06);
+    }
+    th, td {
+      border: none;
+      padding: 14px 10px;
+      text-align: left;
+    }
+    th {
+      background: #e8f5e9;
+      color: #388e3c;
+      font-size: 1.08rem;
+      font-weight: 600;
+      border-bottom: 2px solid #c8e6c9;
+    }
+    tbody tr {
+      border-bottom: 1px solid #e0e0e0;
+      transition: background 0.2s;
+    }
+    tbody tr:hover {
+      background: #f1f8e9;
+    }
+    .categoria-fruta {
+      color: #e65100;
+      font-weight: 600;
+    }
+    .categoria-verdura {
+      color: #388e3c;
+      font-weight: 600;
+    }
+    .categoria-grano {
+      color: #6d4c41;
+      font-weight: 600;
+    }
+    .categoria-hierba {
+      color: #388e3c;
+      font-weight: 600;
+    }
+    .categoria-otro {
+      color: #0288d1;
+      font-weight: 600;
+    }
     @media (max-width:600px){
+      main { padding: 12px 2vw; }
       table, thead, tbody, th, td, tr { display:block; }
       th { display:none; }
-      td { border: none; padding: 8px 0; }
-      td::before { content: attr(data-label) ": "; font-weight: bold; }
+      td { border: none; padding: 10px 0; }
+      td::before { content: attr(data-label) ": "; font-weight: bold; color: #388e3c; }
     }
   </style>
 </head>
 <body>
-  <h1>Productos EcoMarket - Actualizado</h1>
-
-  <!-- Control de filtro (se implementará en feature-filtrado) -->
-  <label for="categoriaFiltro">Filtrar por categoría:</label>
-  <select id="categoriaFiltro">
-    <option value="Todas">Todas</option>
-    <option value="Fruta">Fruta</option>
-    <option value="Verdura">Verdura</option>
-  </select>
-
-  <table id="tablaProductos" aria-describedby="lista-productos">
-    <thead>
-      <tr>
-        <th>Producto</th>
-        <th>Precio</th>
-        <th>Categoría</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="Producto">Manzana</td>
-        <td data-label="Precio">$2.500</td>
-        <td data-label="Categoría">Fruta</td>
-      </tr>
-      <tr>
-        <td data-label="Producto">Tomate</td>
-        <td data-label="Precio">$1.800</td>
-        <td data-label="Categoría">Verdura</td>
-      </tr>
-      <tr>
-        <td data-label="Producto">Piña</td>
-        <td data-label="Precio">$3.000</td>
-        <td data-label="Categoría">Fruta</td>
-      </tr>
-    </tbody>
-  </table>
-
+  <header>
+    <h1>EcoMarket</h1>
+    <p>Productos frescos, saludables y sostenibles para ti y tu familia</p>
+  </header>
+  <main>
+    <div class="bienvenida">
+      <span class="icono" aria-label="hoja">🌱</span>
+      ¡Bienvenido a EcoMarket! Descubre productos ecológicos y apoya a productores locales.
+    </div>
+    <section class="filtro">
+      <label for="categoriaFiltro">Filtrar por categoría:</label>
+      <select id="categoriaFiltro">
+        <option value="Todas">Todas</option>
+        <option value="Fruta">Fruta</option>
+        <option value="Verdura">Verdura</option>
+      </select>
+    </section>
+    <section>
+      <table id="tablaProductos" aria-describedby="lista-productos">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Categoría</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Producto">Manzana</td>
+            <td data-label="Precio">$2.500</td>
+            <td data-label="Categoría" class="categoria-fruta">Fruta</td>
+          </tr>
+          <tr>
+            <td data-label="Producto">Tomate</td>
+            <td data-label="Precio">$1.800</td>
+            <td data-label="Categoría" class="categoria-verdura">Verdura</td>
+          </tr>
+          <tr>
+            <td data-label="Producto">Piña</td>
+            <td data-label="Precio">$3.000</td>
+            <td data-label="Categoría" class="categoria-fruta">Fruta</td>
+          </tr>
+          <tr>
+            <td data-label="Producto">Banano</td>
+            <td data-label="Precio">$1.200</td>
+            <td data-label="Categoría" class="categoria-fruta">Fruta</td>
+          </tr>
+          <tr>
+            <td data-label="Producto">Espinaca</td>
+            <td data-label="Precio">$1.500</td>
+            <td data-label="Categoría" class="categoria-verdura">Verdura</td>
+          </tr>
+          <tr>
+            <td data-label="Producto">Aguacate</td>
+            <td data-label="Precio">$2.800</td>
+            <td data-label="Categoría" class="categoria-fruta">Fruta</td>
+          </tr>
+          <tr>
+            <td data-label="Producto">Zanahoria</td>
+            <td data-label="Precio">$1.000</td>
+            <td data-label="Categoría" class="categoria-verdura">Verdura</td>
+          </tr>
+          <tr>
+            <td data-label="Producto">Lentejas</td>
+            <td data-label="Precio">$2.200</td>
+            <td data-label="Categoría" class="categoria-grano">Grano</td>
+          </tr>
+          <tr>
+            <td data-label="Producto">Cilantro</td>
+            <td data-label="Precio">$800</td>
+            <td data-label="Categoría" class="categoria-hierba">Hierba</td>
+          </tr>
+          <tr>
+            <td data-label="Producto">Limón</td>
+            <td data-label="Precio">$1.400</td>
+            <td data-label="Categoría" class="categoria-fruta">Fruta</td>
+          </tr>
+          <tr>
+            <td data-label="Producto">Papa criolla</td>
+            <td data-label="Precio">$1.600</td>
+            <td data-label="Categoría" class="categoria-verdura">Verdura</td>
+          </tr>
+          <tr>
+            <td data-label="Producto">Mango</td>
+            <td data-label="Precio">$2.700</td>
+            <td data-label="Categoría" class="categoria-fruta">Fruta</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
   <script>
     // Implementación mínima para cuando actives el filtrado (opcional inicialmente)
     document.getElementById('categoriaFiltro').addEventListener('change', function() {
