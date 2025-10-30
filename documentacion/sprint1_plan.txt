@@ -1,0 +1,18 @@
+# Sprint 1 Plan - Proyecto EcoMarket
+
+Objetivo del Sprint:
+Implementar la funcionalidad básica para que los compradores puedan visualizar la lista de productos disponibles con nombre, precio y categoría.
+
+Historias seleccionadas:
+- Historia de Usuario 1: Visualización de productos disponibles.
+- Historia de Usuario 2: Filtro por categoría.
+
+Tareas específicas:
+1. Diseñar la interfaz del listado de productos (Frontend - HTML, CSS, JS).
+2. Conectar el listado con datos simulados (JSON o API fake).
+3. Implementar filtro por categoría.
+4. Probar funcionalidad y responsividad.
+5. Documentar avances en el tablero SCRUM.
+
+Duración estimada del sprint:
+7 días (1 semana)

@@ -1,0 +1,7 @@
+# Rol y Reflexión - Proyecto EcoMarket
+
+Rol desempeñado:
+Desarrollador Frontend (Developer)
+
+Reflexión:
+SCRUM ayuda a mejorar la organización y productividad del proyecto porque divide el trabajo en tareas pequeñas y manejables dentro de sprints. Cada miembro del equipo tiene un rol claro, lo que evita confusiones. Además, el seguimiento diario (Daily Scrum) permite detectar bloqueos a tiempo, y el tablero SCRUM da una visión general del avance. Gracias a esto, el equipo puede adaptarse fácilmente a los cambios y entregar valor de manera continua al cliente.

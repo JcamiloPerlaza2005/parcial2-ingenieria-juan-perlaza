@@ -1,0 +1,33 @@
+# Product Backlog - Proyecto EcoMarket
+
+1. Historia de Usuario 1
+Como comprador, quiero poder visualizar una lista de productos disponibles con su nombre, precio y categoría, para poder elegir fácilmente qué comprar.
+Criterios de aceptación:
+- Se muestra una lista de productos con nombre, precio y categoría.
+- Los datos se cargan correctamente desde el servidor.
+- El diseño es responsivo y claro.
+Prioridad: Alta
+
+2. Historia de Usuario 2
+Como comprador, quiero poder filtrar los productos por categoría, para encontrar más rápido los productos que me interesan.
+Criterios de aceptación:
+- Existe un filtro por categoría visible en la interfaz.
+- Al seleccionar una categoría, solo se muestran productos relacionados.
+- El filtro no afecta el rendimiento de la página.
+Prioridad: Alta
+
+3. Historia de Usuario 3
+Como comprador, quiero poder agregar productos a un carrito de compras, para organizar mis futuras compras.
+Criterios de aceptación:
+- Se puede agregar y eliminar productos del carrito.
+- Se muestra el total actualizado.
+- Los datos del carrito se guardan temporalmente en el navegador.
+Prioridad: Media
+
+4. Historia de Usuario 4
+Como comprador, quiero poder ver detalles de cada producto (imagen, descripción, precio, categoría), para conocer mejor lo que voy a comprar.
+Criterios de aceptación:
+- Al hacer clic en un producto, se abre una vista con más información.
+- Se muestra imagen, descripción, precio y categoría.
+- El diseño es atractivo y claro.
+Prioridad: Media

@@ -1,0 +1,11 @@
+# Tablero SCRUM - Sprint 1
+# Proyecto: EcoMarket
+# Objetivo: Visualización y filtrado de productos disponibles
+
+| To Do                                               | In Progress                                   | Done                                           |
+|----------------------------------------------------|-----------------------------------------------|------------------------------------------------|
+| Diseñar la interfaz del listado de productos       | Implementar conexión con datos simulados (API fake o JSON local) | Crear estructura base del proyecto (HTML, CSS, JS) |
+| Crear filtro por categoría                         | Probar funcionalidad de filtrado en distintos navegadores | Diseñar maquetado responsivo para móviles y escritorio |
+| Documentar avances en el tablero SCRUM             | Ajustar estilos y usabilidad del listado de productos | Configurar repositorio en GitHub y subir avance |
+| Escribir pruebas básicas de interfaz (UI Testing)  |                                               | Generar primera demo funcional para revisión del Product Owner |
+| Revisar retroalimentación del equipo y del PO      |                                               |                                                    |
