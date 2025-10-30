@@ -1,0 +1,26 @@
+Propuesta de implementación del filtro por categoría (EcoMarket)
+
+- UI:
+  - Añadir un <select id="categoriaFiltro"> con opciones: "Todas", "Fruta", "Verdura", etc.
+  - Opcional: añadir campo de búsqueda por nombre (input text).
+
+- Lógica JS (cliente):
+  - Mantener los productos en un array de objetos (o table rows).
+  - Al cambiar el select, filtrar el array y redibujar la tabla o esconder filas.
+  - Soporte para combinaciones: categoria + texto.
+
+- Datos:
+  - Inicialmente usar JSON local (data/products.json) con estructura:
+    [{ "nombre":"Manzana", "precio":2500, "categoria":"Fruta", "descripcion":"" }, ...]
+  - Más adelante conectar a API REST.
+
+- Accesibilidad:
+  - Label asociado para el select.
+  - Estado visible para resultados vacíos.
+
+- Tests:
+  - Caso: seleccionar 'Fruta' muestra solo frutas.
+  - Caso: seleccionar 'Todas' muestra todas.
+
+- Performance:
+  - Para grandes listados usar paginación o búsqueda por servidor.
