@@ -1,0 +1,21 @@
+# Conflicto Resuelto - EcoMarket
+
+Fecha: (poner fecha)
+
+Descripción:
+Al fusionar la rama 'hotfix-actualizacion' con 'main' surgió un conflicto en el archivo src/index.html en la etiqueta <h1>.
+
+Versión en main: <h1>Lista de Productos Frescos</h1>
+Versión en hotfix-actualizacion: <h1>Productos EcoMarket - Actualizado</h1>
+
+Acciones realizadas:
+1. Ejecuté git merge hotfix-actualizacion desde main y confirmé el conflicto.
+2. Abrí src/index.html y reemplacé la sección conflictiva por:
+   <h1>Productos EcoMarket - Actualizado</h1>
+3. Ejecuté:
+   git add src/index.html
+   git commit -m "Resolver conflicto: conservar título 'Productos EcoMarket - Actualizado'"
+4. Hice push a main: git push origin main
+
+Resultado:
+El conflicto fue resuelto manualmente y el repositorio quedó en un estado consistente.
